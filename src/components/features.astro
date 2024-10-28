@@ -1,0 +1,26 @@
+---
+// @ts-ignore
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const features = await getCollection("feature");
+---
+
+<h1 class="text-left text-slate-500">Principles:</h1>
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((featureEntry: any) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={featureEntry.data.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{featureEntry.data.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">
+            {featureEntry.data.description}
+          </p>
+        </div>
+      </div>
+    ))
+  }
+</div>
