@@ -6,5 +6,5 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   site: "https://whyloop.tech",
-  integrations: [tailwind(), sitemap(), icon()],
+  integrations: [tailwind(), sitemap(), icon(), sitemap()],
 });

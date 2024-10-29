@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://whyloop.tech/sitemap-index.xml
