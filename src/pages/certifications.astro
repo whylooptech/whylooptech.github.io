@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
+
+const certLogo = await getCollection("certlogo");
+---
+
+<Layout title="certLogo">
+  <Container>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-3xl mt-12">
+      {
+        certLogo.map((item) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Picture
+                src={item.data.certimg.src}
+                alt={item.data.certimg.alt}
+                sizes="(max-width: 400px) 100vw, 400px"
+                width={400}
+                height={400}
+                class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>
