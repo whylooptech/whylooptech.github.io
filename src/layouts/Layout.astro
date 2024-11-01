@@ -13,7 +13,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 // TODO: change the link to opengraph
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/opengraph.png",
   Astro.site,
 ).toString();
 
@@ -50,8 +50,9 @@ const makeTitle = title ? title + " | " + "WhyLoop" : "WhyLoop - DevOps";
       }}
     />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2R5DE9PQTC"
-    ></script>
+    <script
+      is:inline
+      src="https://www.googletagmanager.com/gtag/js?id=G-2R5DE9PQTC"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
