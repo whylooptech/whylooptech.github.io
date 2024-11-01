@@ -1,5 +1,5 @@
 ---
 title: "Automate wherever reasonable"
-description: "No more tedious and error prone manual processes."
+description: "The 90's called...Good News! They do no want their manual tasks and processes back!"
 icon: "bx:bxs-bot"
 ---

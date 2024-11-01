@@ -35,6 +35,7 @@ const certCollection = defineCollection({
         src: image(),
         alt: z.string(),
       }),
+      verify: z.string(),
     }),
 });
 

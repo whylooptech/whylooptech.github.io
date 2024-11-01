@@ -1,5 +1,5 @@
 ---
-title: "Cloud agnostic"
-description: "AWS, Azure, GCP, whichever fits the bill."
+title: "Cloud first"
+description: "AWS, Azure or whichever fits the bill."
 icon: "bx:bxs-cloud"
 ---

@@ -8,35 +8,37 @@ const certLogo = await getCollection("certlogo");
 
 <Layout title="certLogo">
   <Container>
+    <h2 class="text-justifed text-center mt-2">
+      As whyloop founder, I bring with me a wealth of real-life experience and
+      expertise.
+    </h2>
+    <h3 class="text-justifed text-center mt-1">
+      Belows are some of the industry certifications I obtained over the past
+      years. They will never be as valuable as real life experience. However,
+      they attest that my skills have been vetted and are an irrefutable proof
+      of my dedication to continuously learn, improve and deliver quality
+      solutions at every steps of each client's DevOps journey.
+    </h3>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-3xl mt-12">
       {
         certLogo.map((item) => (
           <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={item.data.certimg.src}
-                alt={item.data.certimg.alt}
-                sizes="(max-width: 400px) 100vw, 400px"
-                width={400}
-                height={400}
-                loading="eager"
-                class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
+            <a href={item.data.verify}>
+              <div class="w-full aspect-square">
+                <Picture
+                  src={item.data.certimg.src}
+                  alt={item.data.certimg.alt}
+                  sizes="(max-width: 400px) 100vw, 400px"
+                  width={400}
+                  height={400}
+                  loading="eager"
+                  class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+                />
+              </div>
+            </a>
           </div>
         ))
       }
     </div>
   </Container>
 </Layout>
-
-<!-- TODO: Implement link to credely using:
-
-<Link
-  href="https://www.credly.com/users/frederic-leveque.c81e175a"
-  target="_blank"
-  rel="noopener"
-  style="muted"
-  set:text="Check"
-  class="grid md:grid-cols-3 gap-10 mx-auto max-w-3xl mt-12"
-/> -->
