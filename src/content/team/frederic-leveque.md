@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Frederic Leveque"
-title: "Director / Senior DevOps Engineer"
+title: "Founder / Senior DevOps Engineer"
 avatar: {
     src: "./devop_portrait.png",
     alt: "Frederic Leveque"
