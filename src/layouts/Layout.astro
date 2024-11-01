@@ -21,7 +21,7 @@ const resolvedLogoWithDomain = new URL("/favicon.svg", Astro.site).toString();
 
 const { title } = Astro.props;
 
-const makeTitle = title ? title + " | " + "WhyLoop" : "WhyLoop - DevOps";
+const makeTitle = title ? +"WhyLoop" + " | " + title : "WhyLoop - DevOps";
 ---
 
 <!doctype html>
